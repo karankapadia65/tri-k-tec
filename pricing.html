@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing | TRI-K-TEC</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div id="nav-container"></div>
+
+<!-- Hero -->
+<section class="hero">
+  <h1>Pricing</h1>
+  
+  <p style="max-width: 60%; text-align: center;">
+    TRI-K-TEC offers flexible, competitive, and transparent pricing tailored to your business needs.
+    Our engagement models are designed to optimize commercial performance and scale as your
+    organization grows. Choose the model that aligns with your objectives—whether sustained
+    strategic support or agile, project-based expertise.
+  </p>
+</section>
+
+<!-- Intro -->
+
+
+<!-- Pricing Models -->
+<section class="section">
+  <h2>Engagement Models</h2>
+
+  <div class="cards">
+    <!-- FTE Model -->
+    <div class="card">
+      <h3>
+        <i class="fa-solid fa-user-group logo-icon"></i>
+        Full-Time Equivalent (FTE) Model
+      </h3>
+      <p>
+        Our FTE pricing model provides dedicated, highly skilled pricing professionals who operate
+        as an extension of your commercial team. These experts deliver end-to-end support across
+        bid pricing, cost modeling, margin optimization, and strategic pricing initiatives.
+      </p>
+      <p>
+        By embedding FTE resources within your organization, TRI-K-TEC enables predictable costs,
+        knowledge retention, and operational continuity—ideal for enterprises seeking sustained
+        pricing excellence and long-term strategic advantage.
+      </p>
+    </div>
+
+    <!-- Job-to-Job Model -->
+    <div class="card">
+      <h3>
+        <i class="fa-solid fa-briefcase logo-icon"></i>
+        Job-to-Job (Project-Based) Model
+      </h3>
+      <p>
+        Our Job-to-Job pricing model delivers specialized, on-demand expertise for targeted pricing
+        initiatives. TRI-K-TEC supports one-time bids, market assessments, price optimization
+        projects, and short-term commercial engagements.
+      </p>
+      <p>
+        This flexible model offers rapid execution, cost efficiency, and access to niche pricing
+        skills—enabling high-impact results without long-term commitments.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison Table -->
+<section class="section">
+  <h2>Key Differences at a Glance</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3 style="text-align: center;">Feature</h3>
+      <p><strong>Engagement</strong></p>
+      <p><strong>Resource Allocation</strong></p>
+      <p><strong>Cost Structure</strong></p>
+      <p><strong>Flexibility</strong></p>
+      <p><strong>Best For</strong></p>
+    </div>
+
+    <div class="card">
+      <h3>FTE Model</h3>
+      <p>Dedicated & long-term</p>
+      <p>Exclusive to your business</p>
+      <p>Fixed & predictable</p>
+      <p>Moderate</p>
+      <p>Continuous pricing operations and strategic initiatives</p>
+    </div>
+
+    <div class="card">
+      <h3>Job-to-Job Model</h3>
+      <p>Project-based & short-term</p>
+      <p>Assigned per project</p>
+      <p>Variable per assignment</p>
+      <p>High</p>
+      <p>One-time bids, short-term projects, specialized analysis</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <h2>Let’s Build the Right Engagement Model for You</h2>
+  <p>
+    Whether you need a dedicated pricing team or project-based expertise,
+    TRI-K-TEC offers flexible models aligned with your goals.
+  </p>
+  <a class="btn gold" href="quotes.html" style="text-decoration: none;">Request Pricing Consultation</a>
+  <div class="social-icons" aria-label="Social links">
+    <a href="https://www.linkedin.com/company/tri-k-tec/posts/?feedView=all" target="_blank" rel="noopener" aria-label="Tri-K-Tec on LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M20.447 20.452H16.89v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.345V9h3.414v1.561h.047c.476-.9 1.637-1.85 3.37-1.85 3.603 0 4.267 2.371 4.267 5.456v6.285zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.977 20.452H3.695V9h3.282v11.452z"/>
+      </svg>
+    </a>
+    <a href="mailto:business@tri-k-tec.com" aria-label="Email business@tri-k-tec.com">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<footer>
+  © TRI-K-TEC — Transparent Pricing. Strategic Value.
+</footer>
+
+<script>
+fetch('nav.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('nav-container').innerHTML = data;
+    
+    // Add active state to current page navigation
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.main-nav a');
+    
+    navLinks.forEach(link => {
+      const linkHref = link.getAttribute('href');
+      if (linkHref === currentPage && !link.classList.contains('no-active')) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How We Work | TRI-K-TEC</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div id="nav-container"></div>
+
+  <!-- How We Work -->
+  <section class="section info-section">
+    <h2>How We Work</h2>
+    <div class="info-content">
+      <p class="lead-text">
+        Our delivery approach is built on precision, accountability, and long-term
+        partnership. We operate as an extension of our clients’ teams—bringing
+        discipline, insight, and execution excellence.
+      </p>
+      <ul class="why">
+        <li>Deep understanding of business objectives and industry dynamics</li>
+        <li>Customized solutions aligned to specific operational challenges</li>
+        <li>Structured workflows supported by multi-level quality reviews</li>
+        <li>Strict confidentiality and compliance protocols</li>
+        <li>Transparent communication and continuous collaboration</li>
+      </ul>
+      <p>
+        By combining domain expertise with rigorous analytical frameworks and
+        governance-driven execution, we deliver actionable intelligence that enables
+        informed decision-making and sustainable growth.
+      </p>
+    </div>
+  </section>
+
+  <section class="section info-section" style="margin-top: 40px;">
+    <h2>Delivery Framework</h2>
+    <div class="info-content" style="text-align:center; margin-bottom:32px;">
+      <img src="framework.png" alt="Delivery Framework" style="max-width:100%;height:auto;margin-bottom:24px;border-radius:8px;box-shadow:0 8px 32px rgba(0,0,0,0.08);">
+    </div>
+    <div class="info-content">
+      <ol style="margin-left: 1.2em;">
+        <li><strong>Engagement Definition</strong><br>
+          <span style="color: var(--slate);">Clear articulation of scope, objectives, timelines, and success criteria.</span>
+        </li>
+        <li><strong>Expert Alignment</strong><br>
+          <span style="color: var(--slate);">Allocation of relevant functional expertise based on engagement requirements.</span>
+        </li>
+        <li><strong>Execution &amp; Analysis</strong><br>
+          <span style="color: var(--slate);">Structured research and analysis conducted using validated sources and established frameworks.</span>
+        </li>
+        <li><strong>Quality Review</strong><br>
+          <span style="color: var(--slate);">Independent quality assurance to ensure accuracy, consistency, and completeness.</span>
+        </li>
+        <li><strong>Final Delivery</strong><br>
+          <span style="color: var(--slate);">Submission of refined, client-ready deliverables with appropriate documentation.</span>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <footer style="margin-top: 60px;">
+    <span style="color: var(--gold); font-weight: 500;">TRI-K-TEC</span> &mdash; Where Intelligence Becomes Strategy
+    <div class="footer-icons" aria-label="Footer links">
+      <a href="https://www.linkedin.com/company/tri-k-tec/posts/?feedView=all" target="_blank" rel="noopener" aria-label="Tri-K-Tec on LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20.447 20.452H16.89v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.345V9h3.414v1.561h.047c.476-.9 1.637-1.85 3.37-1.85 3.603 0 4.267 2.371 4.267 5.456v6.285zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.977 20.452H3.695V9h3.282v11.452z"/>
+        </svg>
+      </a>
+      <a href="mailto:business@tri-k-tec.com" aria-label="Email business@tri-k-tec.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    fetch('nav.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('nav-container').innerHTML = data;
+        // Add active state to current page navigation
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.main-nav a');
+        navLinks.forEach(link => {
+          const linkHref = link.getAttribute('href');
+          if (linkHref === currentPage && !link.classList.contains('no-active')) {
+            link.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>

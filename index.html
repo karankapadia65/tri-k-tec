@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TRI-K-TEC | Where Intelligence Becomes Strategy</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+
+<div id="nav-container"></div>
+
+<section class="hero">
+  <h1>Where Intelligence Becomes Strategy</h1>
+  <p>Transforming data into actionable insights.</p>
+  <a class="btn gold" href="quotes.html" style="text-decoration: none;">Request Consultation</a>
+  <a class="btn outline" href="who-we-are.html" style="text-decoration: none;">View Capabilities</a>
+</section>
+
+<section class="stats">
+  <div><a class="Gold_Text">A+</a>  Grade Standards Quality</div>
+  <div><a class="Gold_Text">100%</a>  Data Confidentiality</div>
+  <div><a class="Gold_Text">360°</a>  Transparent collaborations</div>
+  <div><a class="Gold_Text">6</a>  Core industries Supported</div>
+</section>
+
+<section class="section">
+  <p>
+  <h2>We Are Not a Typical KPO</h2>
+  <p>Precision-driven knowledge solutions for those who demand accuracy and insight.</p></p>
+</section>
+
+<section class="section">
+  <h2>Our Expertise</h2>
+  <div class="cards">
+    <div class="card">
+      <h3><i class="fa-solid fa-search logo-icon"></i> Research & Intelligence</h3>
+      <p>Freely navigate complex questions, markets, and trends.</p>
+    </div>
+    <div class="card">
+      <h3><i class="fa-solid fa-chart-line logo-icon"></i> Analytics & BI</h3>
+      <p>Analyze, derive, visualize: precision insights.</p>
+    </div>
+    <div class="card">
+      <h3><i class="fa-solid fa-book-open logo-icon"></i> Knowledge Support</h3>
+      <p>Decision support, document review, rapid reporting.</p>
+    </div>
+    <div class="card">
+      <h3><i class="fa-solid fa-lightbulb logo-icon"></i> Consulting & Advisory</h3>
+      <p>Strategic foresight, market assessments, drivers.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Our Process</h2>
+  <div class="process">
+    <div class="step"><h4>Understand</h4><p>Align with your goals.</p></div>
+    <div class="arrow">⟶</div>
+    <div class="step"><h4>Design</h4><p>Craft tailored solutions.</p></div>
+    <div class="arrow">⟶</div>
+    <div class="step"><h4>Execute</h4><p>Deliver with precision.</p></div>
+    <div class="arrow">⟶</div>
+    <div class="step"><h4>Optimize</h4><p>Refine for impact.</p></div>
+  </div>
+</section>
+
+<section class="section why">
+  <h2>Why Tri-K-Tec?</h2>
+  <ul>
+    <li>Expert-Led Analysis</li>
+    <li>Strict Data Security</li>
+    <li>Insightful Reporting</li>
+    <li>Long-Term Partnership</li>
+  </ul>
+</section>
+
+<section class="cta">
+  <h2>Schedule a Strategy Call</h2>
+  <a class="btn gold" href="quotes.html" style="text-decoration: none;">Schedule a Strategy Call</a>
+  <div class="social-icons" aria-label="Social links">
+    <a href="https://www.linkedin.com/company/tri-k-tec/posts/?feedView=all" target="_blank" rel="noopener" aria-label="Tri-K-Tec on LinkedIn">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M20.447 20.452H16.89v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.345V9h3.414v1.561h.047c.476-.9 1.637-1.85 3.37-1.85 3.603 0 4.267 2.371 4.267 5.456v6.285zM5.337 7.433a2.062 2.062 0 1 1 0-4.124 2.062 2.062 0 0 1 0 4.124zM6.977 20.452H3.695V9h3.282v11.452z"/>
+      </svg>
+    </a>
+    <a href="mailto:business@tri-k-tec.com" aria-label="Email business@tri-k-tec.com">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+      </svg>
+    </a>
+  </div>
+</section>
+
+<footer>
+  “Tri-K-Tec delivers insights that drive our strategic decisions.”
+</footer>
+
+<script>
+fetch('nav.html')
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById('nav-container').innerHTML = data;
+    
+    // Add active state to current page navigation
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.main-nav a');
+    
+    navLinks.forEach(link => {
+      const linkHref = link.getAttribute('href');
+      if (linkHref === currentPage && !link.classList.contains('no-active')) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
